@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="panel" style="background-color: darkgray;">
+            <div class="panel-heading">
+                <h3 class="pt-3 font-weight-bold"><b>Admin Login</b></h3>
+            </div>
+            <div class="panel-body p-3">
+                <form (ngSubmit)="userLogin()">
+                    <div class="form-group pt-3">
+                        <div class="input-field">
+                            <span class="fa fa-user p-2"></span>
+                            <input type="text" class="form-control" [(ngModel)]="admin.userName" name="userName"
+                                id="userName" placeholder="Account number">
+                        </div>
+                    </div>
+                    <div class="form-group pt-3">
+                        <div class="input-field">
+                            <span class="fa fa-lock p-2"></span>
+                            <input [type]="type" class="form-control" [(ngModel)]="admin.password" name="password"
+                                id="password" placeholder="Password">
+                            <span (click)="hideShowPassword()" class="fa {{eyeIcon}}"></span>
+                        </div>
+                    </div>
+
+                    <div class="adminlogin">
+                        <button type="reset" class="btn admin1 btn-danger btn-block">Clear</button>
+                        <button type="submit" class="btn admin2 btn-primary btn-block">Login</button>
+                    </div>
+                    <div class="from-inline fr mt-4">
+                        <a id="forget" class="font-weight-bold" style="display: block;
+                        text-align: end;">Forget Password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

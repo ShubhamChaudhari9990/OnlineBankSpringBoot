@@ -1,0 +1,229 @@
+<form (ngSubmit)="saveRegister()">
+  <section class="h-100 h-custom gradient-custom-2">
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-13">
+          <div class="card card-registration" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0" style="background-color: black;">
+                <div class="col-lg-5 btn-lg">
+                  <div class="p-3">
+                    <h3 class="fw-normal mb-4" style="color: #1a1824;">Personal Infomation</h3>
+
+                    <div class="row">
+                      <div class="container col-md-3 mb-2 pb-2">
+                        <select class="select form-control" name="prefix" [(ngModel)]="user.prefix">
+                          <option value="none">select</option>
+                          <option value="Mr">Mr</option>
+                          <option value="Miss">Miss</option>
+                          <option value="Dr">Dr</option>
+                        </select>
+                      </div>
+
+                      <div class="container">
+                        <label class="mt-4">First Name</label>
+                        <input type="text" placeholder="First name" class="form-control" [(ngModel)]="user.firstName"
+                          name="firstName">
+
+                        <label class="mt-4">Middle Name</label>
+                        <input type="text" placeholder="Middle name" class="form-control" [(ngModel)]="user.middleName"
+                          name="middleName" />
+
+                        <label class="mt-4">Last Name</label>
+                        <input type="text" placeholder="Last name" class="form-control" [(ngModel)]="user.lastName"
+                          name="lastName" />
+                      </div>
+
+                      <div class="container col-md-5 mb-4 mt-4">
+                        <div>
+                          <label class="mt-4">Date Of Birth</label>
+                          <input type="date" class="form-control" name="date" [(ngModel)]="user.dob" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-5 mb-4">
+                        <div class="mt-4">
+                          <label>
+                            Marital Status :
+                          </label><br>
+                          <input type="radio" value="married" [(ngModel)]="user.maritalStatus" name="status" checked>
+                          single
+                          <input type="radio" value="unmarried" [(ngModel)]="user.maritalStatus" name="status"> Married
+                        </div>
+
+                        <div class="mt-4">
+                          <label>
+                            Gender :
+                          </label><br>
+                          <input type="radio" value="Male" [(ngModel)]="user.gender" name="gender" checked> Male
+                          <input type="radio" value="Female" [(ngModel)]="user.gender" name="gender"> Female
+                          <input type="radio" value="Other" [(ngModel)]="user.gender" name="gender"> Other
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-6 mt-4">
+                          <label>
+                            Aadhar Number :
+                          </label><br>
+                          <input type="text" name="aadhar" [(ngModel)]="user.aadhar" placeholder="1234 5678 7890">
+                        </div>
+
+                        <div class="col-lg-6 mt-4">
+                          <label>
+                            Pan Number :
+                          </label><br>
+                          <input type="text" name="pan" [(ngModel)]="user.pan" placeholder="Pan numebr">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 bg-indigo text-white">
+                  <div class="p-3">
+                    <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label for="">Address</label><br>
+                        <textarea name="address" [(ngModel)]="user.address" class="form-control" rows="3"
+                          placeholder="Enter your Current Address"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label>City</label>
+                        <input type="text" name="city" [(ngModel)]="user.city" class="form-control"
+                          placeholder="Pune" />
+                      </div>
+                    </div>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label>State</label>
+                        <input type="text" name="state" [(ngModel)]="user.state" class="form-control"
+                          placeholder="Maharashtra" />
+                      </div>
+                    </div>
+
+                    <div class="mb-4 pb-2">
+                      <div class="form-outline form-white">
+                        <label>Country</label>
+                        <input type="text" name="country" [(ngModel)]="user.country" class="form-control"
+                          placeholder="India" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-3 mb-4 pb-2">
+
+                        <div class="form-outline form-white">
+                          <label>Country code</label>
+                          <input type="text" name="countryCode" [(ngModel)]="user.countryCode" class="form-control"
+                            placeholder="+91" />
+                        </div>
+
+                      </div>
+                      <div class="col-md-9 mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <label>Mobile number</label>
+                          <input type="text" name="mobile" [(ngModel)]="user.mobile" class="form-control"
+                            placeholder="1234567890" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <div class="form-outline form-white">
+                        <label>Your Email</label>
+                        <input type="text" id="form3Examplea9" name="email" [(ngModel)]="user.email"
+                          class="form-control" placeholder="abc@gmail.com" />
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <input id="date" type="text" name="date" [(ngModel)]="user.date" class="mt-2 form-control"
+                          value="{{date | date:'medium' }}">
+                      </div>
+                    </div>
+
+                    <!-- <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label text-white" for="form2Example3">
+                      I do accept the <a href="#" class="text-white"><u>Terms and Conditions</u></a> of your
+                      site.
+                    </label>
+                  </div> -->
+
+
+                  </div>
+                </div>
+                <!-- <div class="col-lg-4" style="border: solid;background-color: antiquewhite;border-width: 2px;">
+
+                  <h3><i class="fa fa-money p-3 mb-1" aria-hidden="true"> Account Details</i></h3>
+                  <br>
+                  <div class="row mb-4 design">
+                    <div class="row">
+                      <div class="col-4">
+                        <label id="l" for="accounttype">Account Type</label><br>
+                      </div>
+                      <div class="col">
+                        <input type="radio" [(ngModel)]="reg.accountType" name="accounttype" value="savings">Savings
+                        Account <br>
+                        <input type="radio" [(ngModel)]="reg.accountType" name="accounttype" value="primary">Primary
+                        Account <br>
+                      </div>
+                    </div>
+
+                     </div>
+                  <div class="row design mt-3 mb-4">
+                    <div class="col-4">
+                      <label id="l" for="cardnumber">Card Number</label>
+                    </div>
+                    <div class="col">
+                      <input type="text" [(ngModel)]="reg.cardno" name="card" disabled>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-4">
+                      <label id="l" for="cardnumber">PIN</label>
+                    </div>
+                    <div class="col">
+                      <input type="password" [(ngModel)]="reg.pin" name="pin">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row design">
+                    <div class="col-4">
+                      <label for="servicerequird">Service Required</label>
+                    </div>
+                    <div class="col">
+                      <input type="checkbox" [(ngModel)]="reg.service" name="service" value="atm">ATM CARD <br>
+                      <input type="checkbox" [(ngModel)]="reg.service" name="service" value="mobile">Mobile Banking <br>
+                      <input type="checkbox" [(ngModel)]="reg.service" name="service" value="internet">Internet Banking
+                      <br>
+                      <input type="checkbox" [(ngModel)]="reg.service" name="service" value="email">Email Alerts <br>
+                      <input type="checkbox" [(ngModel)]="reg.service" name="service" value="e">E-Statement <br>
+                    </div>
+                  </div>
+
+                  </div>
+                  
+                </div> -->
+                <div class="containerjustify-content-center submit mt-2">
+                  <div class="col mb-4">
+                    <button type="reset" value="clear" class="btn1 btn btn-danger btn-block mt-3 w-50">clear</button>
+                    <button type="submit" class="btn btn1 btn-primary btn-block mt-3 w-50">Submit</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

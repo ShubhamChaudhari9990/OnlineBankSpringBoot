@@ -1,0 +1,56 @@
+<html>
+<div class="outer">
+    <div id="head">
+        <div class="text-center">
+            <h4 style="text-align: end;">{{date | date:'medium'}}</h4>
+            <h1 class="h1 fa fa-university fa-2x mt-3"><mark> Demo Bank </mark></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary active mt-2 me-2" routerLink="/mainmenu">
+                            Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-success dropdown-toggle mt-2 me-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button" routerLink="adminlogin">Admin</button>
+                                </li>
+                                <li><button class="dropdown-item" type="button" routerLink="login">User</button></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success mt-2 me-2" routerLink="signup">
+                            SignUp</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success mt-2 me-2" routerLink="about">
+                            About</button>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success mt-2 me-2" routerLink="/help">
+                            Help</button>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <button type="button" class="btn btn-outline-success mt-2 me-2" routerLink="/atm">
+                            atm</button>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="card-body">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

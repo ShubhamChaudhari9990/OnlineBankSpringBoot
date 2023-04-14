@@ -1,0 +1,44 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form (ngSubmit)="userLogin()">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" class="form-control" [(ngModel)]="account.accno" id="accno"
+                                        name="accno" placeholder="Account number">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input [type]="type" class="form-control" [(ngModel)]="account.pin" id="pin"
+                                        name="pin" placeholder="Password">
+                                    <span (click)="hideShowPassword()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <div class="from-inline fr mt-4">
+                                <button type="reset" class="btn1 btn btn-danger btn-block">Clear</button>
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </div>
+                            <div class="text-center pt-4 text-muted">
+                                <a id="forget" class="font-weight-bold">Forget Password</a>
+                                Don't have an account?
+                                <a id="forget" routerLink="/signup">SignUp</a>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary bln-block" routerLink="/mainmenu">Home</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+#html{
+    background-color: black;
+}
+.outer{
+    height: auto;
+    background-size: cover;
+    background-image: url('mainmenu.jpg');
+}
+
+
+ul>a:hover{
+    background-color: black;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.navbar{
+    text-align: right;
+}
+
+.card{
+    background-color: rgba(0, 0, 0, 0);
+    /* box-shadow:none !important */
+    border: 0 !important;
+    box-shadow: 0 !important;
+    border: none !important;
+    border-style: none !important;
+
+}
